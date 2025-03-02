@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^9.5.1",
+    "@tailwindcss/postcss": "^4.0.9",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.13.4",
     "@vitejs/plugin-vue": "^5.2.1",
