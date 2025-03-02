@@ -16,14 +16,30 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 <template>
   <nav class="h-16 border-b bg-muted/40 flex justify-between px-6 items-center">
-    <form class="w-full max-w-96">
-      <Input class="w-full pl-8 bg-background" type="text" placeholder="Search ..." />
+    <form class="relative w-full h-fit max-w-96">
+      <iconify-icon
+        class="absolute top-[50%] translate-y-[-50%] left-2.5 text-muted-foreground"
+        icon="lucide:search"
+      ></iconify-icon>
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21l-4.3-4.3" />
+        </g>
+      </svg> -->
+      <Input class="w-full h-20 pl-8 bg-background" type="text" placeholder="Search ..." />
     </form>
     <div class="w-8 h-8 rounded-full bg-white"></div>
     <DropdownMenu>
       <DropdownMenuTrigger>
         <Avatar>
-          <!-- <AvatarImage src="https://github.com/unovue.png" alt="@unovue" /> -->
+          <AvatarImage src="https://github.com/unovue.png" alt="@unovue" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
