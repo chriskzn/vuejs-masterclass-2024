@@ -1,8 +1,10 @@
 import { fileURLToPath, URL } from 'node:url'
 import VueRouter from 'unplugin-vue-router/vite'
 
-import tailwind from 'tailwindcss'
+//import tailwind from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
+import tailwindcss from '@tailwindcss/vite'
+//import postcss from 'postcss'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -20,9 +22,13 @@ export default defineConfig({
     }),
   ],
   css: {
-    postcss: {
-      plugins: [],
-    },
+    // plugins: {
+    //   "@tailwindcss/postcss": {},
+    // }
+    // postcss: {
+
+    // },
+    plugins: [autoprefixer(), tailwindcss()],
   },
   resolve: {
     alias: {
